@@ -10,9 +10,28 @@ Automatically generates a clickable index for any PDF and prepends it to the doc
 - Adds bookmarks to the PDF outline
 - Exports the index as Excel (`.xlsx`), Markdown (`.md`), HTML (`.html`), and CSV for review
 
-## Output
+## Usage
 
-For each input PDF a folder is created under `outputs/` containing:
+### Web app (recommended)
+
+```bash
+streamlit run app.py
+```
+
+Upload a PDF through the browser, then download the indexed PDF and all export formats directly.
+
+### Command line
+
+1. Drop your PDF(s) into the `input/` folder
+2. Run:
+
+```bash
+python pdf_indexer.py
+```
+
+Outputs are saved to `outputs/<pdf-name>/`.
+
+## Output files
 
 | File | Description |
 |---|---|
@@ -21,15 +40,6 @@ For each input PDF a folder is created under `outputs/` containing:
 | `index.md` | Index in Markdown |
 | `index.html` | Index as a web page |
 | `review_pages.csv` | Pages where the title couldn't be detected confidently |
-
-## Usage
-
-1. Drop your PDF(s) into the `input/` folder
-2. Run the script:
-
-```bash
-python pdf_indexer.py
-```
 
 ## Installation
 
